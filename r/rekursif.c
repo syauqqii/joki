@@ -36,7 +36,7 @@ int getMin(int arr[], int n){
 	int i;
 	
 	if(n != 0){
-		if(arr[n] < getMin(arr, n-1)){
+		if(arr[n] <= getMin(arr, n-1)){
 			return arr[n];
 		} else{
 			return getMin(arr, n-1);
@@ -103,14 +103,14 @@ int main(){
 	int indexMax = 0;
 	int indexMin = 0;
 	
-	for(i=0; i<tmp-1; i++){
+	for(i=0; i<tmp; i++){
 		if(max == prodi[i].jumlahMahasiswa){
 			indexMax = i;
 			break;
 		}
 	}
 	
-	for(i=0; i<tmp-1; i++){
+	for(i=0; i<tmp; i++){
 		if(min == prodi[i].jumlahMahasiswa){
 			indexMin = i;
 			break;
